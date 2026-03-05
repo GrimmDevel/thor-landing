@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thor Messenger — Secure, but fun</title>
+    <meta name="description"
+        content="Thor Messenger: A chat app so secure even your mom can't read your texts. X3DH, Ratchets, and Relays.">
+    <link rel="stylesheet" href="landing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="blob"></div>
+    <div class="blob" style="top: 60%; left: 80%; background: rgba(59, 130, 246, 0.15); width: 400px; height: 400px;">
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="#3b82f6" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>THOR</span> MESSENGER
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>What you say here,<span> stays here.</span></h1>
+                <p>Because your government doesn't need to know what you had for breakfast. Military-grade encryption,
+                    zero servers, full 'catch me if you can' vibes.
+                </p>
+                <a href="download.html" class="cta-button">Get the damn app</a>
+            </div>
+        </section>
+    </div>
+
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nerd Stuff (Why we're secure)</h2>
+                <p>We threw a bunch of scary math at your messages</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>X3DH & Ratchet</h3>
+                    <p>Basically, a digital titanium vault for your memes. Only you and your friend have the keys.
+                        Hackers just get sad.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Cascade Relays</h3>
+                    <p>Your data plays electronic hopscotch around the globe. Good luck tracking that IP, feds.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>No Storage</h3>
+                    <p>We have the memory of a goldfish. Once delivered, your messages vanish from our relays. Poof.
+                        Gone.</p>
+                </div>
+            </div>
+            <section class="security-viz">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>How the magic happens</h2>
+                        <p>Watch your data do cool acrobatics</p>
+                    </div>
+                    <div class="viz-grid">
+                        <div class="viz-item">
+                            <div class="viz-svg">
+                                <svg viewBox="0 0 240 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M 20 60 L 100 60" stroke="#cbd5e1" stroke-width="1.5"
+                                        stroke-dasharray="4 4" />
+                                    <path d="M 140 60 L 220 60" stroke="#cbd5e1" stroke-width="1.5"
+                                        stroke-dasharray="4 4" />
+
+                                    <path d="M 20 60 L 220 60" stroke="#3b82f6" stroke-width="2" fill="none"
+                                        stroke-linecap="round" class="animate-stream" />
+
+                                    <g transform="translate(120, 60)">
+                                        <circle cx="0" cy="0" r="20" fill="#ffffff" stroke="#e2e8f0"
+                                            stroke-width="1.5" />
+                                        <rect x="-8" y="-1" width="16" height="12" rx="2" fill="#3b82f6" />
+                                        <path d="M-4 -1 V-5 C-4 -7 4 -7 4 -5 V-1" stroke="#3b82f6" stroke-width="2"
+                                            stroke-linecap="round" fill="none" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <h3>E2E Encryption</h3>
+                            <p>Your texts get scrambled into unreadable jargon before they leave your phone. Hackers
+                                just see a beautiful mess.</p>
+                        </div>
+
+                        <div class="viz-item">
+                            <div class="viz-svg">
+                                <svg viewBox="0 0 240 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M 30 60 Q 80 15 120 60 T 210 60" stroke="#cbd5e1" stroke-width="1.5"
+                                        fill="none" stroke-dasharray="3 3" />
+                                    <path d="M 30 60 Q 80 105 120 60 T 210 60" stroke="#cbd5e1" stroke-width="1.5"
+                                        fill="none" stroke-dasharray="3 3" />
+
+                                    <circle r="3" fill="#3b82f6">
+                                        <animateMotion dur="2.5s" repeatCount="indefinite"
+                                            path="M 30 60 Q 80 15 120 60 T 210 60" />
+                                    </circle>
+                                    <circle r="3" fill="#60a5fa">
+                                        <animateMotion dur="3s" repeatCount="indefinite"
+                                            path="M 30 60 Q 80 105 120 60 T 210 60" begin="0.8s" />
+                                    </circle>
+                                    <circle r="3" fill="#93c5fd">
+                                        <animateMotion dur="2.2s" repeatCount="indefinite"
+                                            path="M 30 60 Q 80 15 120 60 T 210 60" begin="1.2s" />
+                                    </circle>
+
+                                    <g>
+                                        <circle cx="30" cy="60" r="6" fill="#ffffff" stroke="#94a3b8"
+                                            stroke-width="2" />
+                                        <circle cx="120" cy="60" r="8" fill="#ffffff" stroke="#3b82f6"
+                                            stroke-width="2.5" />
+                                        <circle cx="210" cy="60" r="6" fill="#ffffff" stroke="#94a3b8"
+                                            stroke-width="2" />
+                                        <circle cx="75" cy="37.5" r="4.5" fill="#ffffff" stroke="#cbd5e1"
+                                            stroke-width="1.5" />
+                                        <circle cx="165" cy="82.5" r="4.5" fill="#ffffff" stroke="#cbd5e1"
+                                            stroke-width="1.5" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <h3>Cascade Relays</h3>
+                            <p>Bouncing your connection through random nodes like a digital pinball. We don't even know
+                                where you are.</p>
+                        </div>
+
+                        <div class="viz-item">
+                            <div class="viz-svg">
+                                <svg viewBox="0 0 240 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="80" y="25" width="80" height="70" rx="4" stroke="#94a3b8"
+                                        stroke-width="1.5" fill="#ffffff" />
+                                    <line x1="80" y1="48" x2="160" y2="48" stroke="#cbd5e1" stroke-width="1.5" />
+                                    <line x1="80" y1="71" x2="160" y2="71" stroke="#cbd5e1" stroke-width="1.5" />
+
+                                    <g transform="translate(0, 0)">
+                                        <rect x="92" y="34" width="56" height="8" rx="2" fill="#3b82f6"
+                                            class="animate-dissolve" />
+                                        <rect x="92" y="57" width="56" height="8" rx="2" fill="#93c5fd"
+                                            class="animate-dissolve" style="animation-delay: 1s;" />
+                                        <rect x="92" y="80" width="56" height="8" rx="2" fill="#cbd5e1"
+                                            class="animate-dissolve" style="animation-delay: 2s;" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <h3>Zero Storage</h3>
+                            <p>Once your message arrives, we yeet it from our servers. No logs, no proof, no problem.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="footer-content container">
+                    <h2 class="footer-title">FREE INTERNET</h2>
+                    <div class="footer-bottom">
+                        &copy; 2026 Thor Messenger. All rights reserved (we think). <br>
+                        By <span style="color: var(--primary-color);">Feverlabs</span> &mdash; fueled by caffeine and
+                        sheer paranoia.
+                    </div>
+                </div>
+            </footer>
+
+            <script>
+                console.log("%c FBI Open Up!", "font-size: 30px; font-weight: bold; color: red; text-shadow: 2px 2px 0 #000;");
+                console.log("%c Just kidding. Looking for backdoors? You won't find them here YEAH CUZ ITS JUST HTML LANDING LOL. im too lazy to use react ngl", "font-size: 14px; color: #3b82f6;");
+                const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+                let konamiPosition = 0;
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === konamiCode[konamiPosition]) {
+                        konamiPosition++;
+                        if (konamiPosition === konamiCode.length) {
+                            alert('God Mode Activated! ⚡\\nActually no, you are just secure. Now go touch some grass.');
+                            konamiPosition = 0;
+                        }
+                    } else {
+                        konamiPosition = 0;
+                    }
+                });
+            </script>
+</body>
+
+</html>
