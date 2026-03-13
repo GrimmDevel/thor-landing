@@ -1,17 +1,18 @@
 :root {
-    --primary-color: #0f172a;
-    --accent-color: #3b82f6;
-    --text-color: #1e293b;
-    --bg-color: #f8fafc;
-    --secondary-bg: rgba(255, 255, 255, 0.4);
-    --border-color: rgba(226, 232, 240, 0.8);
-    --glass-bg: rgba(255, 255, 255, 0.7);
-    --glow-color: rgba(59, 130, 246, 0.2);
+    --primary-color: #3A3028; /* coffee-bean */
+    --accent-color: rgba(58, 48, 40, 0.8); /* coffee-bean variant */
+    --text-color: #3A3028;
+    --bg-color: #F5EFEB; /* almond */
+    --secondary-bg: rgba(245, 239, 235, 0.4);
+    --border-color: rgba(58, 48, 40, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.6);
+    --glow-color: rgba(58, 48, 40, 0.1);
+    --shadow-color: rgba(58, 48, 40, 0.05);
 }
 
 * {
     padding: 0;
-    margin: 0;
     box-sizing: border-box;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
@@ -19,9 +20,9 @@
 body {
     background-color: var(--bg-color);
     background-image:
-        radial-gradient(at 0% 0%, hsla(214, 100%, 94%, 1) 0, transparent 50%),
-        radial-gradient(at 50% 0%, hsla(217, 100%, 92%, 1) 0, transparent 50%),
-        radial-gradient(at 100% 0%, hsla(220, 100%, 95%, 1) 0, transparent 50%);
+        radial-gradient(at 0% 0%, hsla(350, 40%, 90%, 1) 0, transparent 50%),
+        radial-gradient(at 50% 0%, hsla(10, 30%, 85%, 1) 0, transparent 50%),
+        radial-gradient(at 100% 0%, hsla(20, 40%, 92%, 1) 0, transparent 50%);
     background-attachment: fixed;
     color: var(--text-color);
     line-height: 1.6;
@@ -83,8 +84,30 @@ header {
     gap: 0.75rem;
 }
 
+.nav-download-btn {
+    display: inline-flex;
+    align-items: center;
+    background: var(--primary-color);
+    color: var(--bg-color);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px -3px var(--glow-color);
+    background: rgba(0, 0, 0, 0.9);
+}
+
 .logo span {
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -103,45 +126,104 @@ header {
 
 .hero-content {
     max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    background: var(--glass-bg);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1.25rem;
+    border-radius: 2rem;
+    font-size: 0.65rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: rgba(58, 48, 40, 0.6);
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 6px -1px var(--shadow-color);
+}
+
+.pulse-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    margin-right: 0.75rem;
+    animation: pulse 2s infinite;
+    box-shadow: 0 0 8px rgba(58, 48, 40, 0.4);
 }
 
 .hero-content h1 {
-    font-size: 5rem;
+    font-size: 5.5rem;
     font-weight: 900;
-    line-height: 1;
+    line-height: 1.1;
     letter-spacing: -0.05em;
     margin-bottom: 2rem;
     color: var(--primary-color);
 }
 
 .hero-content h1 span {
-    background: linear-gradient(to right, #3b82f6, #2563eb);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--primary-color);
+    opacity: 0.4;
+    font-weight: 900;
 }
 
 .hero-content p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 500;
-    color: #64748b;
+    color: rgba(58, 48, 40, 0.6);
     margin: 0 auto 3.5rem;
-    max-width: 700px;
-    letter-spacing: -0.01em;
+    max-width: 650px;
+    line-height: 1.8;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .cta-button {
     display: inline-flex;
     align-items: center;
     background: var(--primary-color);
-    color: white;
+    color: var(--bg-color);
     padding: 1.25rem 3rem;
-    border-radius: 1.25rem;
+    border-radius: 2rem;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 1.125rem;
+    font-weight: 900;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    background: var(--glass-bg);
+    color: var(--primary-color);
+    padding: 1.25rem 3rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid var(--border-color);
+}
+
+.secondary-btn:hover {
+    transform: translateY(-4px);
+    background: white;
+    box-shadow: 0 10px 25px -5px var(--glow-color);
 }
 
 .cta-button:hover {
@@ -181,35 +263,37 @@ header {
 }
 
 .feature-card {
-    background: rgba(255, 255, 255, 0.6);
-    padding: 4rem 3rem;
-    border-radius: 2.5rem;
+    background: var(--glass-bg);
+    padding: 3.5rem 2.5rem;
+    border-radius: 3rem;
     border: 1px solid var(--border-color);
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(12px);
     position: relative;
     overflow: hidden;
+    box-shadow: 0 10px 30px -10px var(--shadow-color);
 }
 
 .feature-card:hover {
-    transform: translateY(-12px);
-    background: #fff;
-    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.1);
-    border-color: #3b82f6;
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 20px 40px -12px var(--shadow-color);
+    border-color: rgba(255, 255, 255, 0.8);
 }
 
 .feature-card h3 {
-    font-size: 1.75rem;
-    font-weight: 800;
+    font-size: 1.5rem;
+    font-weight: 900;
     letter-spacing: -0.03em;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
     color: var(--primary-color);
 }
 
 .feature-card p {
     font-size: 1.125rem;
-    color: #64748b;
+    color: rgba(58, 48, 40, 0.6);
     font-weight: 500;
+    line-height: 1.7;
 }
 
 .download-section {
@@ -224,10 +308,10 @@ header {
 
 .download-card {
     background: var(--glass-bg);
-    padding: 6rem;
+    padding: 5rem 4rem;
     border-radius: 4rem;
     border: 1px solid var(--border-color);
-    box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 60px -10px var(--shadow-color);
     text-align: center;
     max-width: 800px;
     width: 100%;
@@ -237,7 +321,7 @@ header {
 
 .download-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 50px 120px -20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 30px 80px -15px var(--shadow-color);
 }
 
 .download-card h2 {
@@ -294,7 +378,7 @@ header {
     left: -100px;
     width: 600px;
     height: 600px;
-    background: rgba(59, 130, 246, 0.1);
+    background: rgba(58, 48, 40, 0.05);
     filter: blur(80px);
     border-radius: 50%;
     z-index: -1;
@@ -344,17 +428,20 @@ header {
 
 .viz-item {
     background: var(--glass-bg);
-    padding: 3rem;
-    border-radius: 2.5rem;
+    padding: 3.5rem 2.5rem;
+    border-radius: 3rem;
     border: 1px solid var(--border-color);
     text-align: center;
     backdrop-filter: blur(12px);
     transition: all 0.4s ease;
+    box-shadow: 0 10px 30px -10px var(--shadow-color);
 }
 
 .viz-item:hover {
     transform: translateY(-8px);
-    border-color: var(--accent-color);
+    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 20px 40px -12px var(--shadow-color);
 }
 
 .viz-svg {
@@ -365,14 +452,16 @@ header {
 
 .viz-item h3 {
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 900;
     margin-bottom: 1rem;
     color: var(--primary-color);
 }
 
 .viz-item p {
-    color: #64748b;
+    color: rgba(58, 48, 40, 0.6);
     font-size: 1rem;
+    line-height: 1.7;
+    font-weight: 500;
 }
 
 .animate-stream {
@@ -467,7 +556,7 @@ footer {
 }
 
 .footer-bottom {
-    color: #94a3b8;
+    color: rgba(58, 48, 40, 0.4);
     font-size: 0.875rem;
     font-weight: 500;
 }
